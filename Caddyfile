@@ -7,8 +7,8 @@
 # sure your domain's A/AAAA DNS records are properly pointed to
 # this machine's public IP, then replace the line below with your
 # domain name.
-:80
-#yuyaichimura.com
+#:80
+yuyaichimura.com
 
 # Set this path to your site's directory.
 root * /var/www/html
@@ -27,4 +27,15 @@ file_server
 
 log {
   output file /logs/log.txt
+}
+
+header / {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Xss-Protection "1; mode=block"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Content-Security-Policy "upgrade-insecure-requests"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    Cache-Control "public, max-age=15, must-revalidate"
+    Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'self'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture *; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none'"
 }
