@@ -24,3 +24,7 @@ file_server
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
+
+log {
+  output file /logs/log.txt
+}
