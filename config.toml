@@ -1,5 +1,5 @@
 baseURL = "https://yuyaichimura.com/"
-#baseURL = "http://localhost"
+#baseURL = "localhost:1313"
 languageCode = "en-us"
 title = "Yuya Ichimura"
 theme = "pulp"
@@ -14,11 +14,11 @@ hasCJKLanguage = true
 
 [params]
     author = "Yuya Ichimura"
-    avatar = "yuya.jpg"
-    # avatarDescription = "My avatar description"
+    avatar = "avatar.jpg"
+    avatarDescription = "Yuya Ichimura"
     favicon = "favicon.ico"
     description = """
-     Dev 
+     Dev
     """
     publicationYear = "2020"
     # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
@@ -29,7 +29,7 @@ hasCJKLanguage = true
 # Make sure setting a following option for search bar to work
 [outputs]
     section = ["JSON", "HTML"]
-    taxonomy = ["JSON", "HTML"]
+    #taxonomy = ["JSON", "HTML"]
 
 [[menu.main]]
     identifier = "linkedin"
