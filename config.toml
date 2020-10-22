@@ -1,5 +1,4 @@
 baseURL = "https://yuyaichimura.com/"
-#baseURL = "localhost:1313"
 languageCode = "en-us"
 title = "Yuya Ichimura"
 theme = "pulp"
@@ -12,10 +11,13 @@ hasCJKLanguage = true
 [markup.goldmark.renderer]
     unsafe = true # Allow user HTML tags
 
+[module]
+  [[module.imports]]
+    path = "github.com/koirand/pulp"
+
 [params]
     author = "Yuya Ichimura"
     avatar = "avatar.jpg"
-    avatarDescription = "Yuya Ichimura"
     favicon = "favicon.ico"
     description = """
      Dev
@@ -25,11 +27,13 @@ hasCJKLanguage = true
     # singlePageDateFormat = "January 2, 2006"
     # custom_css = ["/css/custom.css"]
     # custom_js = ["/js/custom.js"]
+    custom_css = ["/css/custom.css"]
+
 
 # Make sure setting a following option for search bar to work
 [outputs]
     section = ["JSON", "HTML"]
-    #taxonomy = ["JSON", "HTML"]
+    term = ["JSON", "HTML"]
 
 [[menu.main]]
     identifier = "linkedin"
