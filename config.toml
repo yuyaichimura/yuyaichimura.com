@@ -1,58 +1,60 @@
 baseURL = "https://yuyaichimura.com/"
-languageCode = "en-us"
 title = "Yuya Ichimura"
-theme = "pulp"
-canonifyurls = true
-hasCJKLanguage = true
-# pygmentsCodefences = true
-# pygmentsUseClasses = true
-# googleAnalytics = "{your tracking code}"
 
-[markup.goldmark.renderer]
-    unsafe = true # Allow user HTML tags
+theme = "hugo-coder"
 
-[module]
-  [[module.imports]]
-    path = "github.com/koirand/pulp"
+languageCode = "en-us"
+defaultcontentlanguage = "en"
+paginate = 10
+
+[markup.highlight]
+style = "github-dark"
 
 [params]
     author = "Yuya Ichimura"
-    avatar = "avatar.jpg"
-    favicon = "favicon.ico"
-    description = """
-     Dev
-    """
+    avatarurl = "images/avatar.jpg"
+
+    favicon = "images/favicon-16x16.png"
+    favicon_32 = "images/favicon-32x32.png"
+    favicon_16 = "images/favicon-16x16.png"
+    faviconSVG = "images/favicon.svg"
+
     publicationYear = "2020"
-    # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
-    # singlePageDateFormat = "January 2, 2006"
-    # custom_css = ["/css/custom.css"]
-    # custom_js = ["/js/custom.js"]
-    custom_css = ["/css/custom.css"]
+    mask = "yuya"
+    info = "dev"
+
+    # Set disableReadOtherPosts to true in order to hide the links to other posts.
+    disableReadOtherPosts = false
+
+    since = 2020
 
 
-# Make sure setting a following option for search bar to work
-[outputs]
-    section = ["JSON", "HTML"]
-    term = ["JSON", "HTML"]
+    enableTwemoji = true
 
-[[menu.main]]
-    identifier = "linkedin"
-    # name = "Twitter"
-    pre = "<i class='fab fa-linkedin fa-lg'></i>"
-    url = "https://linkedin.com/in/yuya-ichimura"
+    colorScheme = "auto"
 
-    weight = 20
 
-[[menu.main]]
-    identifier = "github"
-    # name = "GitHub"
-    pre = "<i class='fab fa-github fa-lg'></i>"
-    url = "https://github.com/yuyaichimura"
-    weight = 30
+# Social links
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-envelope fa-2x"
+  weight = 1
+  url = "mailto:yuyaichimura@gmail.com"
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 2
+  url = "https://github.com/yuyaichimura"
+[[params.social]]
+  name = "LinkedIn"
+  identifier = "linkedin"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 3
+  url = "https://linkedin.com/in/yuya-ichimura"
 
-[[menu.main]]
-    identifier = "email"
-    # name = "Email"
-    pre = "<i class='fa fa-envelope fa-lg'></i>"
-    url = "mailto:yuyaichimura@gmail.com"
-    weight = 40
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
