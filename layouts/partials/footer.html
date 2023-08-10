@@ -1,0 +1,10 @@
+<footer class="footer">
+  <section class="container">
+    {{ with .Site.Params.author }} {{ . }} {{ end }}
+    ·
+    {{ now.Year }}
+    {{ if (and .Site.Params.license) }}
+      {{ i18n "licensed_under" }} {{ .Site.Params.license | safeHTML }}
+    {{ end }}
+  </section>
+</footer>
