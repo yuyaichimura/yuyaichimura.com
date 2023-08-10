@@ -2,15 +2,12 @@ version: '3'
 
 services:
   caddy:
-    image: "caddy"
+    image: yuyaichimura/yuyaichimura.com
     ports:
       - 443:443
-        #- 80:80
-      - 8089:80
+      - 80:80
     environment:
       - CADDYPATH=/etc/caddycerts
     volumes:
-      - ./public:/var/www/html
-      - ./Caddyfile:/etc/caddy/Caddyfile
       - ./.caddy/:/etc/caddycerts/
       - ./logs/:/logs/
