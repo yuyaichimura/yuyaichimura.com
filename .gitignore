@@ -1,2 +1,5 @@
 .caddy/*
 logs/*
+public
+resources
+utils/*
